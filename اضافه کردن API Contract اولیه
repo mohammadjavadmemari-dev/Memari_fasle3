@@ -1,0 +1,38 @@
+# API Contract اولیه - فصل ۳
+
+## Resourceهای پروژه
+- Users
+- Tasks
+
+## Endpoints
+
+### Users
+| Endpoint       | Method | توضیح               | Status Code |
+|----------------|--------|---------------------|-------------|
+| /users         | GET    | لیست همه کاربران    | 200         |
+| /users         | POST   | ساخت کاربر جدید     | 201         |
+| /users/{id}    | GET    | گرفتن یک کاربر      | 200         |
+| /users/{id}    | PUT    | ویرایش کاربر        | 200         |
+| /users/{id}    | DELETE | حذف کاربر           | 204         |
+
+### Tasks
+| Endpoint       | Method | توضیح               | Status Code |
+|----------------|--------|---------------------|-------------|
+| /tasks         | GET    | لیست همه تسک‌ها     | 200         |
+| /tasks         | POST   | ساخت تسک جدید       | 201         |
+| /tasks/{id}    | GET    | گرفتن یک تسک        | 200         |
+| /tasks/{id}    | PUT    | ویرایش تسک          | 200         |
+| /tasks/{id}    | DELETE | حذف تسک             | 204         |
+
+## دیاگرام معماری
+
+Client (Frontend)
+       │
+       ▼
+   Backend API
+       │
+       ├── Users Resource
+       └── Tasks Resource
+       │
+       ▼
+     Database
